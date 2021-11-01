@@ -19,8 +19,10 @@ public class Anagram {
         System.out.println(result);
     }
     public static String isAnagram(String s1, String s2){
-        char[] c1 = s1.toLowerCase().toCharArray();
-        char[] c2 = s2.toLowerCase().toCharArray();
+        String str1 = s1.replaceAll("[\\s,\\p{P}]", "");
+        String str2 = s2.replaceAll("[\\s,\\p{P}]", "");
+        char[] c1 = str1.toLowerCase().toCharArray();
+        char[] c2 = str2.toLowerCase().toCharArray();
         String answer = "Анаграмма";
 
         Arrays.sort(c1);
